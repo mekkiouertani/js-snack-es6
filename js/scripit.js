@@ -98,3 +98,40 @@ const newSnack3 = snack3.map((el)=>{
     return upper
 })
 console.log("SNACK 3", newSnack3);
+
+
+//SNACK # 4
+    /* Crea un array di oggetti che rappresentano degli animali.
+    Ogni animale ha un nome, una famiglia e una classe. 
+    Crea un nuovo array con la lista dei mammiferi.*/
+
+const snack4 = [
+    {
+        specie: "leone",
+        famiglie: "felidi",
+        classe: "mammiferi"
+    },
+    {
+        specie: "cane",
+        famiglie: "canidi",
+        classe: "mammiferi"
+    },
+    {
+        specie: "gallina",
+        famiglie: "fasianidi",
+        classe: "uccelli"
+    },
+    {
+        specie: "serpente",
+        famiglie: "fasianidi",
+        classe: "rettile"
+    },
+    {
+        specie: "pappagallo",
+        famiglie: "fasianidi",
+        classe: "uccelli"
+    },
+]
+
+const newSnack4 = snack4.filter((el)=> el.famiglie = "mammiferi");
+console.log("SNACK 4",newSnack4);
