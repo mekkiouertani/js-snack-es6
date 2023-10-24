@@ -69,9 +69,3 @@ const students = [
     },
 ];
 
-const studentsNames = students.map((el)=>  el.name.toUpperCase());
-    
-   
-
-
-console.log(studentsNames);
