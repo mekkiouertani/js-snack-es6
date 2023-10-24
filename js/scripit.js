@@ -15,4 +15,14 @@ const guests = [
 ];
 
 
+const printList = guests.map((guestName,i) => {
+    let guest = {
+        guestName: guestName,
+        tableName: "VIP Table",
+        place: i + 1
+    };
+    return guest
+});
+
+console.log(printList);
 
