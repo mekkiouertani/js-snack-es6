@@ -69,3 +69,12 @@ const students = [
     },
 ];
 
+const studentsNames = students.map((el)=>  el.name.toUpperCase());
+console.log("SNACK # 2(uppercase)",studentsNames);
+
+const studentGrades = students.filter((el)=> el.grades > 70);
+console.log("SNACK # 2(grades)",studentGrades);
+
+const studentGradesId = students.filter((el)=> el.grades > 70 && el.id > 120);
+console.log("SNACK # 2(ID & grades)",studentGradesId);
+
