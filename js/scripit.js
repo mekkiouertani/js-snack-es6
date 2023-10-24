@@ -1,6 +1,14 @@
 "use strict"
 
 //SNACK #1
+    /* Dwayne Johnson ci ha chiesto di creare i segnaposto per il tavolo degli invitati alla sua mega festa vip.
+    Ci ha lasciato il nome del tavolo ("Tavolo Vip") e la lista degli invitati in ordine di posto:
+    [ 'Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'Fedez', 'George Clooney', 'Amal Clooney', 'Maneskin']
+    Ma la tipografia per stampare il tutto vuole che le mandiamo una lista di ospiti in un formato specifico, per cui dobbiamo fare in modo che ogni ospite sia un oggetto javascript che ha come attributi:
+    nome del tavolo, (tableName)
+    nome dell'ospite,  (guestName)
+    posto occupato. (place)
+    Generiamo e stampiamo in console la lista per i segnaposto. */
 
 const guests = [ 
     'Brad Pitt', 
@@ -30,7 +38,11 @@ console.log("SNACK #1",printList);
 
 
 //SNACK #2
-
+    /* Abbiamo un elenco degli studenti di una facoltà, identificati da id, Nome e somma totale dei loro voti di esame...
+    1. Per preparare l'aula di un nuovo corso, dobbiamo stampare le targhe col nome degli studenti: creare una lista contenente il loro nome tutto in maiuscolo
+    ES (Marco della Rovere => MARCO DELLA ROVERE);
+    2. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70
+    3. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70 e id superiore a 120 */
 const students = [
     {
         id : 213,
@@ -135,3 +147,48 @@ const snack4 = [
 
 const newSnack4 = snack4.filter((el) => el.classe === "mammiferi");
 console.log("SNACK 4",newSnack4);
+
+//SNACK #5
+    /* Crea un array di oggetti che rappresentano delle persone.
+    Ogni persona ha un nome, un cognome e un’età.
+    Crea quindi un nuovo array inserendo, per ogni persona, una frase con il
+    nome e cognome e l’indicazione se può guidare, in base all’età. */
+
+const snack5 = [
+    {
+        name: "Marco",
+        surname: "Rossi",
+        age: 30
+    },
+    {
+        name: "Gino",
+        surname: "Paoli",
+        age: 80
+    },
+    {
+        name: "Enza",
+        surname: "Ferrari",
+        age: 19
+    },
+    {
+        name: "Michela",
+        surname: "Bravo",
+        age: 75
+    },
+    {
+        name: "Amber",
+        surname: "Gentile",
+        age: 22
+    },
+    {
+        name: "Johnny",
+        surname: "Bravo",
+        age: 15
+    },
+];
+
+let maxAgeForDrive = 71;
+let minAgeForDrive = 18;
+
+const newSnack5 = snack5.filter((el)=> el.age < maxAgeForDrive && el.age > minAgeForDrive)
+console.log("SNACK 5",newSnack5);
