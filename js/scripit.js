@@ -1,5 +1,6 @@
 "use strict"
 
+
 //SNACK #1
     /* Dwayne Johnson ci ha chiesto di creare i segnaposto per il tavolo degli invitati alla sua mega festa vip.
     Ci ha lasciato il nome del tavolo ("Tavolo Vip") e la lista degli invitati in ordine di posto:
@@ -23,7 +24,6 @@ const guests = [
     'Maneskin'
 ];
 
-
 const printList = guests.map((guestName,i) => {
     let guest = {
         guestName: guestName,
@@ -36,14 +36,14 @@ const printList = guests.map((guestName,i) => {
 console.log("SNACK #1",printList);
 
 
-
 //SNACK #2
     /* Abbiamo un elenco degli studenti di una facoltà, identificati da id, Nome e somma totale dei loro voti di esame...
     1. Per preparare l'aula di un nuovo corso, dobbiamo stampare le targhe col nome degli studenti: creare una lista contenente il loro nome tutto in maiuscolo
     ES (Marco della Rovere => MARCO DELLA ROVERE);
     2. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70
     3. Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70 e id superiore a 120 */
-const students = [
+
+    const students = [
     {
         id : 213,
         name : 'Marco della Rovere',
@@ -148,6 +148,7 @@ const snack4 = [
 const newSnack4 = snack4.filter((el) => el.classe === "mammiferi");
 console.log("SNACK 4",newSnack4);
 
+
 //SNACK #5
     /* Crea un array di oggetti che rappresentano delle persone.
     Ogni persona ha un nome, un cognome e un’età.
@@ -192,3 +193,61 @@ let minAgeForDrive = 18;
 
 const newSnack5 = snack5.filter((el)=> el.age < maxAgeForDrive && el.age >= minAgeForDrive)
 console.log("SNACK 5",newSnack5);
+
+
+//SNACK #6
+    /* Crea un array composto da 10 automobili.
+    Ogni oggetto automobile avrà le seguenti proprietà: marca, modello e
+    alimentazione (benzina, diesel, gpl, elettrico, metano).
+    Dividi le automobili in 3 array separati: nel primo array solo le auto a
+    benzina, nel secondo solo le auto a diesel, nel terzo il resto delle auto.
+    Infine stampa separatamente i 3 array. */
+
+const cars = [
+    {
+      brand: "fiat",
+      model: "500",
+      fuel: "diesel"
+    },
+    {
+      brand: "merceds",
+      model: "Series-1",
+      fuel: "gasoline"
+    },
+    {
+      brand: "Alfa Romeo",
+      model: "mito",
+      fuel: "gpl"
+    },
+    {
+      brand: "ferrari",
+      model: "enzo",
+      fuel: "gasoline"
+    },
+    {
+      brand: "porche",
+      model: "cayenne",
+      fuel: "diesel"
+    },
+    {
+      brand: "audi",
+      model: "toto",
+      fuel: "hybrid"
+    },
+];
+  
+const dieselCars = cars.filter((car)=> car.fuel === "diesel");
+
+const gasolineCars = cars.filter((car)=> car.fuel === "gasoline");
+
+const gplCars = cars.filter((car)=> car.fuel ==="gpl");
+
+const otherCars = cars.filter((car)=>{
+    return car.fuel !== "gpl" && car.fuel !== "diesel" &&  car.fuel !== "gasoline";
+}) ;
+
+console.log("SNACK #6: Diesel",dieselCars);
+console.log("SNACK #6: Gasoline",gasolineCars);
+console.log("SNACK #6: Gpl",gplCars);
+console.log("SNACK #6: Other Cars", otherCars);
+  
