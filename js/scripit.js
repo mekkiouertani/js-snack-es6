@@ -133,5 +133,5 @@ const snack4 = [
     },
 ]
 
-const newSnack4 = snack4.filter((el)=> el.famiglie = "mammiferi");
+const newSnack4 = snack4.filter((el) => el.classe === "mammiferi");
 console.log("SNACK 4",newSnack4);
