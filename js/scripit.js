@@ -168,7 +168,7 @@ const snack5 = [
     {
         name: "Enza",
         surname: "Ferrari",
-        age: 19
+        age: 18
     },
     {
         name: "Michela",
@@ -190,5 +190,5 @@ const snack5 = [
 let maxAgeForDrive = 71;
 let minAgeForDrive = 18;
 
-const newSnack5 = snack5.filter((el)=> el.age < maxAgeForDrive && el.age > minAgeForDrive)
+const newSnack5 = snack5.filter((el)=> el.age < maxAgeForDrive && el.age >= minAgeForDrive)
 console.log("SNACK 5",newSnack5);
