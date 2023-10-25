@@ -35,17 +35,6 @@ bikes.forEach((bike)=>{
 
 console.log(`SNACK #3: la bici più si chiama ${biciMinore.name} ed ha un peso di ${biciMinore.weight}kg`);
 
-/* const lowerWeightBike = [];
-
-bikes.forEach((bike)=>{
-    const bikeWeight = bike.weight 
-    lowerWeightBike.push(bikeWeight)
-})
-
-const bikeWithLowerWeight =  Math.min(...lowerWeightBike)
-console.log(`SNACK #3: La bici che pesa di meno :${bikeWithLowerWeight}kg`);
- */
-
 
 //SNACK #4
     /* Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
