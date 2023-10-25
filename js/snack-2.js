@@ -80,3 +80,16 @@ const team = [
     },
 ];
 
+team.forEach((el)=>{
+    el.punti = getRndInteger(1,5);
+    el.falli = getRndInteger(1,10)
+})
+
+const newTeam = team.map((el)=>
+    ({
+        name: el.name,
+        falli: el.falli
+    })
+);
+
+console.log("SNACK #4",newTeam);
