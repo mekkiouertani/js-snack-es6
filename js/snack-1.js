@@ -24,18 +24,27 @@ const guests = [
     'Maneskin'
 ];
 
-const printList = guests.map((guestName,i) => {
+/* const printList = guests.map((guestName,i) => {
     let guest = {
         guestName: guestName,
         tableName: "VIP Table",
         place: i + 1
     };
     return guest
-});
+}); */
+
+const printList = guests.map((guestName,i) => 
+    ({
+        guestName: guestName,
+        tableName: "VIP Table",
+        place: i + 1
+    })
+
+);
 
 console.log("SNACK #1",printList);
 
-
+const placeHolders = guests.map
 //SNACK #2
     /* Abbiamo un elenco degli studenti di una facoltà, identificati da id, Nome e somma totale dei loro voti di esame...
     1. Per preparare l'aula di un nuovo corso, dobbiamo stampare le targhe col nome degli studenti: creare una lista contenente il loro nome tutto in maiuscolo
@@ -82,16 +91,16 @@ console.log("SNACK #1",printList);
 ];
 
 const studentsNames = students.map((el)=>  el.name.toUpperCase());
-console.log("SNACK # 2(uppercase)",studentsNames);
+console.log("SNACK #2(uppercase)",studentsNames);
 
 const studentGrades = students.filter((el)=> el.grades > 70);
-console.log("SNACK # 2(grades)",studentGrades);
+console.log("SNACK #2(grades)",studentGrades);
 
 const studentGradesId = students.filter((el)=> el.grades > 70 && el.id > 120);
-console.log("SNACK # 2(ID & grades)",studentGradesId);
+console.log("SNACK #2(ID & grades)",studentGradesId);
 
 
-//SNACK # 3
+//SNACK #A
     /* A partire da un array di stringhe, crea un secondo array formattando le
     stringhe del primo array in minuscolo e con l’iniziale maiuscola.
     Es: [‘pippo’, ‘PLUTO’, ‘Paperino’] => [‘Pippo’, ‘Pluto’, ‘Paperino’] */
@@ -109,10 +118,10 @@ const newSnack3 = snack3.map((el)=>{
     let upper = lower.charAt(0).toUpperCase() + lower.slice(1)
     return upper
 })
-console.log("SNACK 3", newSnack3);
+console.log("SNACK extra:A", newSnack3);
 
 
-//SNACK # 4
+//SNACK #B
     /* Crea un array di oggetti che rappresentano degli animali.
     Ogni animale ha un nome, una famiglia e una classe. 
     Crea un nuovo array con la lista dei mammiferi.*/
@@ -146,10 +155,10 @@ const snack4 = [
 ]
 
 const newSnack4 = snack4.filter((el) => el.classe === "mammiferi");
-console.log("SNACK 4",newSnack4);
+console.log("SNACK extra:B",newSnack4);
 
 
-//SNACK #5
+//SNACK #C
     /* Crea un array di oggetti che rappresentano delle persone.
     Ogni persona ha un nome, un cognome e un’età.
     Crea quindi un nuovo array inserendo, per ogni persona, una frase con il
@@ -192,10 +201,10 @@ let maxAgeForDrive = 71;
 let minAgeForDrive = 18;
 
 const newSnack5 = snack5.filter((el)=> el.age < maxAgeForDrive && el.age >= minAgeForDrive)
-console.log("SNACK 5",newSnack5);
+console.log("SNACK extra:C",newSnack5);
 
 
-//SNACK #6
+//SNACK #D
     /* Crea un array composto da 10 automobili.
     Ogni oggetto automobile avrà le seguenti proprietà: marca, modello e
     alimentazione (benzina, diesel, gpl, elettrico, metano).
@@ -246,8 +255,7 @@ const otherCars = cars.filter((car)=>{
     return car.fuel !== "gpl" && car.fuel !== "diesel" &&  car.fuel !== "gasoline";
 }) ;
 
-console.log("SNACK #6: Diesel",dieselCars);
-console.log("SNACK #6: Gasoline",gasolineCars);
-console.log("SNACK #6: Gpl",gplCars);
-console.log("SNACK #6: Other Cars", otherCars);
-  
+console.log("SNACK extra:D (Diesel)",dieselCars);
+console.log("SNACK extra:D (Gasoline)",gasolineCars);
+console.log("SNACK extra:D (Gpl)",gplCars);
+console.log("SNACK extra:D (Other Cars)", otherCars);
