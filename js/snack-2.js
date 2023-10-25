@@ -5,7 +5,7 @@
     Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
     Stampare in console la bici con peso minore utilizzando destructuring e template literal */
 
-const bike = [
+const bikes = [
     {
         name: "Ferrari",
         weight: 15
@@ -23,6 +23,19 @@ const bike = [
         weight: 20
     },
 ];
+
+const lowerWeightBike = [];
+
+bikes.forEach((bike,i)=>{
+    const bikeWeight = bike.weight 
+    lowerWeightBike.push(bikeWeight)
+})
+
+const bikeWithLowerWeight =  Math.min(...lowerWeightBike)
+
+console.log(lowerWeightBike);
+console.log(bikeWithLowerWeight);
+console.log(`SNACK #3: La bici che pesa di meno :${bikeWithLowerWeight}kg`);
 
 
 
