@@ -15,7 +15,7 @@ const bikes = [
         weight: 10
     },
     {
-        name: "Beta",
+        name: "Romeo",
         weight: 8
     },
     {
@@ -24,20 +24,27 @@ const bikes = [
     },
 ];
 
-const lowerWeightBike = [];
+/* const lowerWeightBike = [];
 
-bikes.forEach((bike,i)=>{
+bikes.forEach((bike)=>{
     const bikeWeight = bike.weight 
     lowerWeightBike.push(bikeWeight)
 })
 
 const bikeWithLowerWeight =  Math.min(...lowerWeightBike)
-
-console.log(lowerWeightBike);
-console.log(bikeWithLowerWeight);
 console.log(`SNACK #3: La bici che pesa di meno :${bikeWithLowerWeight}kg`);
+ */
 
+let biciMinore = bikes[0];
 
+bikes.forEach((bike)=>{
+    if (bike.weight < biciMinore.weight){
+        biciMinore.name = bike.name;
+        biciMinore.weight = bike.weight;
+    }
+});
+
+console.log(`la bici più si chiama ${biciMinore.name} ed ha un peso di ${biciMinore.weight}kg`);
 
 
 
