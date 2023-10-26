@@ -28,15 +28,6 @@ const bikesLower = bikes.sort((a,b) => a.weight - b.weight)
 console.log(`SNACK #3: La bici che pesa di menosi chiama: ${bikesLower[0].name}
     ed ha un peso di ${bikesLower[0].weight}kg`);
 
-/* let biciMinore = bikes[0];
-bikes.forEach((bike)=>{
-    if (bike.weight < biciMinore.weight){
-        biciMinore.name = bike.name;
-        biciMinore.weight = bike.weight;
-    }
-});
-console.log(`SNACK #3: la bici più leggera si chiama ${biciMinore.name} ed ha un peso di ${biciMinore.weight}kg`); */
-
 
 //SNACK #4
     /* Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
